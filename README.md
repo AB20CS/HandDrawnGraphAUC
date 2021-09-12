@@ -33,12 +33,12 @@ These measurements will be used in Step 8.
 
 ###### Step 8
 Run `calculate_area.py` via the terminal or the IDE of your choice and you will be prompted to enter the following parameters in the Console:
-- Pixels per unit square: the area of a single unit square on the grid (measured in Step 7)
-- Area per unit square: the area of each square in the units of the given context
+- `Pixels per unit square`: the area of a single unit square on the grid (measured in Step 7)
+- `Area per unit square`: the area of each square in the units of the given context
   - In our example, the area per unit square is `5*10=50` since each unit width represents 5 minutes and each unit height represents 10 mm Hg.
-- Value represented by each unit length: the value of each unit length in the given context.
+- `Value represented by each unit length`: the value of each unit length in the given context.
   - In our example, this parameter is equal to `5`.
-- Number of pixels per unit length: the length of a single unit square on the grid (measured in Step 7)
-- Starting value on the y-axis: the y-value at the x-axis
+- `Number of pixels per unit length`: the length of a single unit square on the grid (measured in Step 7)
+- `Starting value on the y-axis`: the y-value at the x-axis
   - In our example, this value is `50`.
 After inputting the parameters, the rest of the program should run and the AUC value will be found in the `CSV` file with the name inputted by the user.
