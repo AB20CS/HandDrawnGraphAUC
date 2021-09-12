@@ -1,31 +1,21 @@
-# Purpose: Calculates the area under the blood pressure curves
-#
-# Anindro Bhattacharya
-#
-# Preconditions:
-#  - size of each square in grid is 1000 pixels
-#  - 1 square = 10 mm Hg * 5 min = 50 mm Hg*min
-#     ==> Unit for final area: mm Hg * min
-#  - length of 1 square = 30 pixels
-#
 
 ####### IMPORTS #######
 
 import os
 import csv
 
-####### CONSTANTS #######
+####### INITIALIZE CONSTANTS #######
 
-CSV_OUT_FILENAME = 'area_log.csv' # CSV file name of output log
+CSV_OUT_FILENAME = input("Enter the name of the output CSV file: ") + '.csv' # stores name of output CSV file (where AUC will be stored)
 
-PIXELS_PER_SQUARE = 1000
-AREA_PER_SQUARE = 50
+PIXELS_PER_SQUARE = input("Enter the number of pixels per unit square: ")
+AREA_PER_SQUARE = input("Enter the area per unit square: ")
 AREA_PER_PIXEL = AREA_PER_SQUARE / PIXELS_PER_SQUARE
 
-MINUTES_PER_UNIT_LENGTH = 5
-PIXELS_PER_LENGTH = 30
+VALUE_PER_UNIT_LENGTH = input("Enter the value represented by each unit length: ")
+PIXELS_PER_LENGTH = input("Enter the number of pixels per unit length: ")
 
-HEIGHT_CUT_OFF = 50
+HEIGHT_CUT_OFF = input("Enter the starting value on the y-axis: ")
 
 #########################
 
@@ -38,14 +28,14 @@ for file in os.listdir():
         with open(file, newline='') as csv_file:
             csv_file.readline() # skips first row in CSV (contains column headers)
             num_pixels = 0
-            time_pixels = 0
+            length_pixels = 0
             for row in csv_file:
                 if float(row.split(',')[6].strip()) == 0:
                     num_pixels += float(row.split(',')[1].strip()) # 2nd column in CSV is area
                 else:
-                    time_pixels += float(row.split(',')[6].strip()) # 7th column in CSV is area
+                    length_pixels += float(row.split(',')[6].strip()) # 7th column in CSV is area
 
-            area_cut_off = (time_pixels / PIXELS_PER_LENGTH) * MINUTES_PER_UNIT_LENGTH * HEIGHT_CUT_OFF
+            area_cut_off = (length_pixels / PIXELS_PER_LENGTH) * VALUE_PER_UNIT_LENGTH * HEIGHT_CUT_OFF
             area = (num_pixels * AREA_PER_PIXEL) + area_cut_off # FINAL AREA VALUE
 
             csv_out.writerow([csv_file.name, area])
