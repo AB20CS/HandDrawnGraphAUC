@@ -24,3 +24,20 @@ Click on the `Straight*, segmented or freehand lines` tool and draw a horizontal
 
 ###### Step 6
 Navigate to the `Results` window and press `Ctrl+S` on your keyboard and save the measurements as a `CSV` file. If there are multiple graphs, repeat Steps 2 to 6 and save the measurements for each subsequent graph in the same location. After all graph measurements have been saved, download `calculate_area.py` from this repository and save it in the same location as the saved `CSV` files. 
+
+###### Step 7
+In the same way as the previous steps, take the following measurements:
+- Area of a single unit square on the grid
+- Length of a single unit square on the grid
+These measurements will be used in Step 8.
+
+###### Step 8
+Run `calculate_area.py` via the terminal or the IDE of your choice and you will be prompted to enter the following parameters in the Console:
+- Pixels per unit square: the area of a single unit square on the grid (measured in Step 7)
+- Area per unit square: the area of each square in the units of the given context
+  - In our example, the area per unit square is `5*10=50` since each unit width represents 5 minutes and each unit height represents 10 mm Hg.
+- Value represented by each unit length: the value of each unit length in the given context.
+  - In our example, this parameter is equal to `5`.
+- Number of pixels per unit length: the length of a single unit square on the grid (measured in Step 7)
+- Starting value on the y-axis: the y-value at the x-axis
+  - In our example, this value is `50`.
