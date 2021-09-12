@@ -1,5 +1,5 @@
 # Area Under the Curve (AUC) of Hand-Drawn Graphs
-Often times, hand-drawn graphs need to be analyzed, but there is too much "noise" on the page for it be fed through an OCR software. Hence, a common alternative is to tediously record the coordinates of each individual point in a spreadsheet. This new solution reduces the hassle of having to parse through each individual data point and can exponentially speed up the time required to process larger amounts of data.
+Area Under the Curve (AUC) of a graph is an important statistical measure with many applications. Often times, the AUC of a hand-drawn graph must be measured, but there is too much "noise" on the page for it be fed through an OCR software. Hence, a common alternative is to tediously record the coordinates of each individual point in a spreadsheet. This new solution reduces the hassle of having to parse through each individual data point and can exponentially speed up the time required to process larger amounts of data.
 
 ## Solution
 _For the purposes of this demonstration, I will use a plot of blood pressures (similar to a record an anesthesiologist may keep during surgery). AUC of blood pressure readings is often a key measurement used to diagnose patients with hypotension/hypertension in clinical research._
