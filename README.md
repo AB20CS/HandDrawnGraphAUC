@@ -8,11 +8,11 @@ _For the purposes of this demonstration, I will use a plot of blood pressures (s
 Download [ImageJ](https://imagej.nih.gov/ij/download.html) distributed by the National Institutes of Health (NIH).
 
 ###### Step 2
-Save the hand-drawn graph in `.png` format. Below is the graph to be used in this demonstration:
+Save the hand-drawn graph in `.PNG` format. Below is the graph to be used in this demonstration:
 ![image](https://user-images.githubusercontent.com/69637288/132969935-5aa4e47b-08b4-4c61-91f8-6d683c74b6d5.png)
 
 ###### Step 3
-Open ImageJ and navigate to `Files` > `Open` and choose the `.png` file saved from Step 2.
+Open ImageJ and navigate to `Files` > `Open` and choose the `.PNG` file saved from Step 2.
 
 ###### Step 4
 Click on the `Polygon selections` tool in the toolbar and draw a polygon on the opened image around the region whose area you wish to determine. Then, click `Analyze` > `Measure`.
