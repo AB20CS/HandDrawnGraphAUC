@@ -8,14 +8,14 @@ import csv
 
 CSV_OUT_FILENAME = input("Enter the name of the output CSV file: ") + '.csv' # stores name of output CSV file (where AUC will be stored)
 
-PIXELS_PER_SQUARE = input("Enter the number of pixels per unit square: ")
-AREA_PER_SQUARE = input("Enter the area per unit square: ")
+PIXELS_PER_SQUARE = input("Pixels per unit square: ")
+AREA_PER_SQUARE = input("Area per unit square: ")
 AREA_PER_PIXEL = AREA_PER_SQUARE / PIXELS_PER_SQUARE
 
-VALUE_PER_UNIT_LENGTH = input("Enter the value represented by each unit length: ")
-PIXELS_PER_LENGTH = input("Enter the number of pixels per unit length: ")
+VALUE_PER_UNIT_LENGTH = input("Value represented by each unit length: ")
+PIXELS_PER_LENGTH = input("Number of pixels per unit length: ")
 
-HEIGHT_CUT_OFF = input("Enter the starting value on the y-axis: ")
+HEIGHT_CUT_OFF = input("Starting value on the y-axis: ")
 
 #########################
 
