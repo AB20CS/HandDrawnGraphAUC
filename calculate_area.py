@@ -1,3 +1,6 @@
+# This program calculates the area under the curve of a graph, given the following pre-conditions:
+# - Using ImageJ, the area and length have been measured (according to specifications in README.md)
+# - The output CSV files (containing Area and Length) must be saved in the same directory as calculate_are.py
 
 ####### IMPORTS #######
 
